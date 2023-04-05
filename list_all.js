@@ -1,8 +1,17 @@
-const database = require("./exports").database_file
-const read = require("fs").readFileSync
+const { read_database } = require("./exports")
 
-var linhas = read(database,'utf-8').split("\n")
-linhas.splice(0,3)
-var linha = linhas[1].split(";")
-console.log(linhas)
-console.log(linha)
+function list_all() {
+    let lines = read_database()
+    for (let i = 0; i < lines.length; i++) {
+        if (i === 0) console.clear()
+        let line = lines[i].split(';')
+        console.log(`- ID: ${line[0]}`)
+        console.log(`- Nome: ${line[1]}`)
+        console.log(`- Matricula: ${line[2]}`)
+        console.log(`- Idade: ${line[3]}`)
+        console.log(`- Nota: ${line[4]}`)
+        console.log(" ")
+    }
+}
+
+list_all()

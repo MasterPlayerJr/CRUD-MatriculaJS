@@ -1,10 +1,13 @@
-const database = require("./exports").database_file
-const id_file = require("./exports").id_file
+const { database_file } = require("./exports")
+const { id_file } = require("./exports")
 
 write = require("fs").writeFileSync
 append = require("fs").appendFileSync
 read = require("fs").readFileSync
 input = require("readline-sync").question
+
+exports.get_age = get_age
+exports.get_grade = get_grade
 
 function create_id() {
     let id = parseInt(read(id_file)) + 1
@@ -41,7 +44,5 @@ function register() {
     let grade = get_grade()
     let id = create_id()
     student = [id,name,register,age,grade].join(";")
-    append(database, '\n' + student)
+    append(database_file, '\n' + student)
 }
-
-register()
