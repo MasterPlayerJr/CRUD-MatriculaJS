@@ -1,5 +1,7 @@
 const { read_database } = require("./exports")
 const { get_id } = require("./exports")
+const input = require("readline-sync").question
+
 
 function list_id() {
     console.clear()
@@ -16,6 +18,7 @@ function list_id() {
             console.log(`- Nota: ${line[4]}`)
         }
     }
+    input("")
 }
 
-list_id()
+exports.list_id = list_id

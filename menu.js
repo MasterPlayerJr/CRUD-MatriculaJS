@@ -12,7 +12,6 @@ function menu() {
         console.log("6 - Media do Aluno")
         console.log("0 - Sair")
         process.stdout.write("-> Escolha uma opção:"); let choice = input()
-
         if (!isNaN(choice)) {
             if (choice >= 0 && choice <= 6){
                 return choice
@@ -22,4 +21,4 @@ function menu() {
     }
 }
 
-console.log(menu())
+exports.menu = menu

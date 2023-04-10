@@ -1,9 +1,6 @@
 sep=;
 id;nome;matricula;idade;nota
 
-1;Evaldo;61251;15;20
-2;Lucas;54405;15;29
-3;Danilo;4253;99;20.10
-4;Renato;61123;16;10.5
-5;Renato;61123;16;10.9
-6;Evaldo;7987;15;20
+1;Evaldo;52737;15;99
+2;Danilo;84375;25;0
+3;Marcos;24475;7;40

@@ -1,11 +1,9 @@
-const input = require("readline-sync").question
+const { read_database, get_id, database_file} = require("./exports")
 const write = require("fs").writeFileSync
-const { get_id, read_database, database_file } = require("./exports")
-const { get_age, get_grade } = require("./register")
 
-function edit() {
+function remove() {
     console.clear()
-    console.log(" == Editar Aluno ==")
+    console.log(" == Deletar Aluno ==")
     let lines = read_database()
     let id = get_id()
 
@@ -13,18 +11,15 @@ function edit() {
         var line = lines[i].split(";")
         if (line[0] === id) {
             let position = lines.indexOf(line.join(";"))
-            line[1] = input("-> Digite o novo nome: ")
-            line[3] = get_age()
-            line[4] = get_grade()
-            lines[position] = line.join(";")
+            lines.splice(position,1)
             lines.unshift("id;nome;matricula;idade;nota\n")
             lines.unshift("sep=;")
             lines = lines.join("\n")
             write(database_file,lines,'utf-8')
-            console.log("Aluno editado com sucesso.")
+            console.log("Aluno removido com sucesso.")
             break
         }
     }
 }
 
-exports.edit = edit
+exports.remove = remove

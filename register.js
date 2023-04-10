@@ -46,3 +46,5 @@ function register() {
     student = [id,name,register,age,grade].join(";")
     append(database_file, '\n' + student)
 }
+
+exports.register = register

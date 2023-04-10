@@ -1,4 +1,5 @@
 const { read_database } = require("./exports")
+const input = require("readline-sync").question
 
 function list_all() {
     let lines = read_database()
@@ -12,6 +13,7 @@ function list_all() {
         console.log(`- Nota: ${line[4]}`)
         console.log(" ")
     }
+    input("")
 }
 
-list_all()
+exports.list_all = list_all
