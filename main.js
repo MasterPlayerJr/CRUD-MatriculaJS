@@ -5,11 +5,14 @@ const { list_id } = require("./list_id")
 const { edit } = require("./edit")
 const { remove } = require("./delete")
 const { avarege } = require("./avarege")
+const input = require("readline-sync").question
 
 function main() {
     while (true) {
         choice = parseInt(menu())
         switch (choice) {
+            case 0:
+                return
             case 1:
                 register()
                 break
