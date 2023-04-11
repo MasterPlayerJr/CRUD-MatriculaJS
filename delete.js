@@ -1,5 +1,6 @@
 const { read_database, get_id, database_file} = require("./exports")
 const write = require("fs").writeFileSync
+const input = require("readline-sync").question
 
 function remove() {
     console.clear()
@@ -12,7 +13,7 @@ function remove() {
         if (line[0] === id) {
             let position = lines.indexOf(line.join(";"))
             lines.splice(position,1)
-            lines.unshift("id;nome;matricula;idade;nota\n")
+            lines.unshift("id;nome;matricula;idade;nota")
             lines.unshift("sep=;")
             lines = lines.join("\n")
             write(database_file,lines,'utf-8')

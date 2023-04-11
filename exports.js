@@ -5,7 +5,7 @@ const input = require("readline-sync").question
 
 function read_database() {
     var lines = read(database_file,'utf-8').split("\n")
-    lines.splice(0,3)
+    lines.splice(0,2)
     return lines
 }
 
