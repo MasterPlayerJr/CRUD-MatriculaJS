@@ -11,7 +11,7 @@ function read_database() {
 
 function get_id() {
     let lines = read_database()
-    let id = input("-> Escreva o id do alunho: ")
+    let id = input(">- Escreva o id do alunho: ")
     let found = false
     while (true) {
         for (let i = 0; i < lines.length; i++) {
@@ -23,7 +23,7 @@ function get_id() {
         if (found) {
             return id
         }
-        else id = input("-> Id invalido, Digite outro:")
+        else id = input(">- Id invalido, Digite outro:")
     }
 }
 

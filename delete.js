@@ -16,7 +16,7 @@ function remove() {
             lines.unshift("sep=;")
             lines = lines.join("\n")
             write(database_file,lines,'utf-8')
-            console.log("Aluno removido com sucesso.")
+            console.log("-> Aluno removido com sucesso.")
             break
         }
     }

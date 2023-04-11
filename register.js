@@ -21,7 +21,7 @@ function get_age() {
         if (age > 0 && age <= 100 && (!isNaN(age))) {
             return age
         }
-        else age = input("Idade invalida! Digite novamente:")
+        else age = input(">- Idade invalida! Digite novamente:")
     }
 }
 
@@ -31,7 +31,7 @@ function get_grade() {
         if (grade >= 0 && grade <= 100 && (!isNaN(grade))) {
             return grade
         }
-        else grade = input("Nota Invalida! Digite novamente:")
+        else grade = input(">- Nota Invalida! Digite novamente:")
     }
 }
 

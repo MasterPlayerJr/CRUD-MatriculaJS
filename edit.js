@@ -13,7 +13,7 @@ function edit() {
         var line = lines[i].split(";")
         if (line[0] === id) {
             let position = lines.indexOf(line.join(";"))
-            line[1] = input("-> Digite o novo nome: ")
+            line[1] = input(">- Digite o novo nome: ")
             line[3] = get_age()
             line[4] = get_grade()
             lines[position] = line.join(";")
@@ -21,7 +21,7 @@ function edit() {
             lines.unshift("sep=;")
             lines = lines.join("\n")
             write(database_file,lines,'utf-8')
-            console.log("Aluno editado com sucesso.")
+            console.log("-> Aluno editado com sucesso.")
             break
         }
     }

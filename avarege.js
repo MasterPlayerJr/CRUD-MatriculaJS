@@ -1,4 +1,5 @@
 const { read_database} = require("./exports")
+const input = require("readline-sync").question
 
 function avarege() {
     console.clear()
@@ -13,6 +14,7 @@ function avarege() {
     }
     let media = soma / notas.length
     console.log(`-> A media das notas é ${media}`)
+    input()
 }
 
 exports.avarege = avarege
