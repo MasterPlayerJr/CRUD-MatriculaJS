@@ -12,6 +12,7 @@ function read_database() {
 function get_id() {
     let lines = read_database()
     let id = input(">- Escreva o id do alunho: ")
+    if (id == 0) return 0
     let found = false
     while (true) {
         for (let i = 0; i < lines.length; i++) {
