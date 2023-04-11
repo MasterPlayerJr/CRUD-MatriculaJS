@@ -15,7 +15,6 @@ function menu() {
         if (!isNaN(choice)) {
             if (choice >= 0 && choice <= 6){
                 return choice
-                break
             }
         }
     }
