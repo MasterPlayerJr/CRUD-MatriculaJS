@@ -7,7 +7,7 @@ function list_id() {
     console.clear()
     let lines = read_database()
     let id = get_id()
-    
+    if (id == 0) return 
     for (let i = 0; i < lines.length; i++) {
         var line = lines[i].split(";")
         if (line[0] === id) {

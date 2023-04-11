@@ -1,13 +1,12 @@
 const { read_database, get_id, database_file} = require("./exports")
 const write = require("fs").writeFileSync
-const input = require("readline-sync").question
 
 function remove() {
     console.clear()
     console.log(" == Deletar Aluno ==")
     let lines = read_database()
     let id = get_id()
-
+    if (id == 0) return 
     for (let i = 0; i < lines.length; i++) {
         var line = lines[i].split(";")
         if (line[0] === id) {
