@@ -5,8 +5,6 @@ const b_edit = document.querySelector(".editar");
 const b_remove = document.querySelector(".excluir");
 const b_avarage = document.querySelector(".media");
 
-var soma = 1
-
 function cadastro() {
     window.location.href = "register.html"
 }
