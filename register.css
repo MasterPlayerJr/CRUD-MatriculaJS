@@ -9,7 +9,36 @@ body {
     padding: 0;
     text-shadow: 1px 1px 1px rgb(0, 0, 0,0.2)
 }
-
 .voltar {
-    
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url("back-icon.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 75px;
+    background-color: rgb(201, 194, 194);
+    border: 5px solid rgb(54, 53, 53);
+    border-radius: 20%;
+    user-select: none;
+}
+
+.inputs {
+    display: grid;
+    gap: 10px;
+}
+
+.caixa {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }

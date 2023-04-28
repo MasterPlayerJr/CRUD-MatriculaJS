@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de aluno</title>
+    <title>Cadastrar aluno</title>
     <link href="register.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="registrar.js"></script>
 </head>
 <body>
-    <div class="voltar"></div>
+    <h1 class="title">Cadastro de aluno</h1>
+    <a href="index.html" class="voltar"></a>
+    <div class="inputs">
+        <input type="text" id = "nome" placeholder="Nome">
+        <input type="text" id = "idade" placeholder="0-100">
+        <input type="text" id = "nota" placeholder="Nota">
+    </div>
+    <button onclick="registrar()">Resgistrar</button>
 </body>
+
 </html>
