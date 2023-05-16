@@ -1,12 +1,16 @@
 function create_id() {
-    id = 1
-    let id = localStorage.getItem('id') + 1
-    localStorage.setItem('last_id',JSON.stringify(id))
-    return id
+    let id = parseInt(localStorage.getItem('last_id')) + 1;
+    if (!isNaN(id)) {
+        localStorage.setItem('last_id', id);
+        return id;
+    } else {
+        localStorage.setItem('last_id', 0);
+        return 0;
+    }
 }
 
 function get_idade() {
-    var idade = document.getElementsById("idade").value
+    var idade = document.getElementById("idade").value
     console.log(idade)
     if (idade > 0 && idade <= 100 && (!isNaN(idade))) {
         return idade
@@ -24,11 +28,12 @@ function get_nota() {
 
 function registrar() {
     console.clear
-    var nome = document.getElementsById(".nome").value
+    var nome = document.getElementById("nome").value
     var matricula = Math.floor(Math.random() * (100000 - 1 + 1) + 1)
     var idade = get_idade()
     var nota = get_nota()
     var id = create_id()
-    student = [id,nome,matricula,idade,nota].join(";")
+    student = [nome,matricula,idade,nota].join(";")
+    localStorage.setItem(id,JSON.stringify(student))
     console.log(student)
 }
